@@ -25,7 +25,16 @@ function App() {
       {members.map((member, idx) => {
         return (
           <div key={idx}>
-            {member.email}, {member.name}, {member.role}
+            <h1>
+            Email - {member.email}
+            </h1><br />
+            <h1>
+              Name - {member.name} 
+              </h1><br />
+              <h1>
+                Role - {member.role}
+              </h1>
+            
           </div>
         )
       })}
