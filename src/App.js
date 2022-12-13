@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import Form from './Components/Form';
 function App() {
-  const [members, setMembers] = useState ({ name: '', email:'', role: ''});
-  const [values, setValues] = useState ({name:'', email: '', role:''});
+  const [members, setMembers] = useState ([]);
+  const [values, setValues] = useState ({name:'', email:'', role:''});
 
   const onSubmit = () => {
     setMembers([values, ...members]);
+    setValues({name: '', email:'', role: ''});
 
   }
 
@@ -13,7 +14,7 @@ function App() {
     setValues({...value, [name]: value})
   }
 
-  return ()
+  return (
     <div className="App">
       <h1>Team Builder App!!</h1>
       <Form
@@ -21,6 +22,13 @@ function App() {
       change={onChange}
       submit={onSubmit}
       />
+      {members.map((member, idx) => {
+        return (
+          <div key={idx}>
+            {member.email}, {member.name}, {member.role}
+          </div>
+        )
+      })}
     </div>
   );
 }

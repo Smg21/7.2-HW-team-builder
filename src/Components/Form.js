@@ -23,28 +23,28 @@ const Form = (props) =>{
     }
     return (
         <form onSubmit = {handleSubmit}>
-            <label>Name
+            <label>name
 
             <input 
-            placeholder = "Enter Your Name Please "
-            value = {values.name}
+            placeholder = "Enter Your Name Please"
+            value = {props.values.name}
             name="name"
             onChange={handleChange}
 
             />
             </label><br />
-            <label> Email
+            <label>email
                 <input
             placeholder="Please Enter Your Email "
-            values="email"
+            value={props.values.email}
             onChange={handleChange}
              />
             </label><br />
 
-            <label>Role
+            <label>role
             <input 
             placeholder="Enter your role here"
-            value={values.role}
+            value={props.values.role}
             name="role"
             onChange={handleChange}
             />
