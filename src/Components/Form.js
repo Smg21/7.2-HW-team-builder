@@ -1,20 +1,12 @@
 
 
-/**
- * Create State Variables To Hold Team Members and Hold Form Values
- * Create Update and Submit Functions
- * I know I will need props because App.js will be sending down the updates
- */
 
 import React from "react";
 
 const Form = (props) => {
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    /**
-     * const name = event.target.name
-     * const value = event.target.value
-     */
+  const handleChange = (evt) => {
+    const { name, value } = evt.target;
+   
     props.change(name, value);
   };
 
@@ -25,7 +17,7 @@ const Form = (props) => {
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Name
+        name
         <input
           placeholder="Enter Your Name Please"
           value={props.values.name}
@@ -35,7 +27,7 @@ const Form = (props) => {
       </label>
       <br />
       <label>
-        Email
+        email
         <input
           placeholder="Please Enter Your Email "
           value={props.values.email}
