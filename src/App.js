@@ -7,6 +7,7 @@ function App() {
   const onSubmit = () => {
     setMembers([values, ...members]);
     setValues({ name: "", email: "", role: "" });
+    
   }
 
   
@@ -14,8 +15,7 @@ function App() {
 
 
   const onChange = (name, value) => {
-    setValues({ ...value, [name]: value });
-
+    setValues({ ...values, [name]: value });
   };
 
   return (
