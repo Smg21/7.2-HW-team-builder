@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Form from "./Components/Form";
+
 function App() {
   const [members, setMembers] = useState([]);
   const [values, setValues] = useState({ name: "", email: "", role: "" });
@@ -29,7 +30,7 @@ function App() {
             <br />
             <h1>Name - {member.name}</h1>
             <br />
-            <h1>Role - {member.role}</h1>
+            <h1>Pass - {member.role}</h1>
           </div>
         );
       })}

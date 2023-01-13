@@ -33,15 +33,23 @@ const Form = (props) => {
       <br />
 
       <label>
-        role
+        Password
         <input
-          placeholder="Enter your role here"
-          value={props.values.role}
-          name="role"
+          placeholder="Enter your password here"
+          value={props.values.pass}
+          name="pass"
           onChange={handleChange}
         />
       </label>
-      <input type="submit" value="Create your Team!" />
+      <br />
+      <label> Agree To The Terms And Conditions 
+        <input 
+        type="checkbox"
+        name="check"
+        />
+      </label>
+      <br />
+      <input type="submit" value="Create your Team!" id="Submit" />
     </form>
   );
 };
